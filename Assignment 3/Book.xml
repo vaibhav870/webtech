@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="book_catalog.css"?>
+<CATALOG>
+<BOOK>
+<TITLE>Database Management System</TITLE>
+<AUTHOR>Korth</AUTHOR>
+<PRICE>500</PRICE>
+<YEAR>1985</YEAR>
+</BOOK>
+
+<BOOK>
+<TITLE>Computer Network</TITLE>
+<AUTHOR>Tenenbaum</AUTHOR>
+<PRICE>600</PRICE>
+<YEAR>1985</YEAR>
+</BOOK>
+
+<BOOK>
+<TITLE>Software Engineering and project Management</TITLE>
+<AUTHOR>Roger Pressman</AUTHOR>
+<PRICE>600</PRICE>
+<YEAR>1985</YEAR>
+</BOOK>
+</CATALOG>
