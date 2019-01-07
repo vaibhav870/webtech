@@ -1,0 +1,79 @@
+<html>
+<head>
+<title>regform</title>
+<link href="samp.css" rel="stylesheet"></link>
+<script type="text/javascript">
+function Validation()
+{
+varemailID = document.myForm.EMail.value;
+varnum=document.myForm.ph.value;
+atpos = emailID.indexOf("@");
+dotpos = emailID.lastIndexOf(".");
+if (atpos< 1 || ( dotpos - atpos< 2 ))
+{
+alert("Please enter correct email ID")
+document.myForm.EMail.focus() ;
+return false;
+}
+else if (isNaN(num)){
+document.getElementById("ph");
+alert("Please enter numeric only.")
+return false;
+}else{
+return true;
+}
+}
+</script>
+</head>
+<body>
+<div class="con">
+<form name="myForm" action="display.xml" method="get" align="center">
+<div class="con2">
+<imgsrc="D:/handshake.jpg" width=380px height=100px></img>
+</div>
+<div class="main">
+<table align="center">
+<tr><td><b><br>Welcome to Registration Page<br><br></td></tr>
+</table>
+<div class="con1">
+<table align="center">
+<tr>
+<td>Full Name:</td>
+<td><input type="text" id="FirstName" value="" required></input></td>
+</tr>
+<tr>
+<td>Class:</td>
+<td><input type="text" id="Class" value="" required></input></td>
+</tr>
+<tr>
+<td>Department:</td>
+<td><input type="text" id="Department" value="" required></input></td>
+</tr>
+<tr>
+<td>address:</td>
+<td><textarea row="3" column="2" value=""
+required></textarea></td>
+</tr>
+<tr>
+<td>email Id:</td>
+<td><input type="text" value="" id="EMail"
+required></input></td>
+</tr>
+<tr>
+<td>phone no:</td>
+<td><input type="text" id="ph" value="" required></input></td>
+</tr>
+<tr>
+<tr></tr><tr></tr></table>
+<table align="center">
+<td><input type="submit" value="SUBMIT" onclick="return
+(Validation());"></td>
+<td><input type="reset" value="CANCEL"></td>
+</tr>
+</table>
+</div>
+</div>
+</form>
+</div>
+</body>
+</html>
