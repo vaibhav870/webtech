@@ -1,0 +1,33 @@
+.con
+{
+width:400px;
+height:400px;
+background-color:lightgray;
+color:blue;
+padding:0px 10px 0px 10px;
+margin:auto;
+}
+.main
+{
+width:400px;
+height:80px;
+float:left;
+padding:60px 10px 10px10px;
+margin: auto;
+}
+.con1
+{
+width:200px;
+height:30px;
+float:left;
+margin:auto;
+padding:0px 0px 0px0px;
+}
+.con2
+{
+width:150px;
+height:30px;
+float:left;
+margin:10px 10px 10px10px;
+padding:0px 0px 0px0px;
+}
