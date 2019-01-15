@@ -16,7 +16,7 @@ if(email_regx.test(email) == false){
 		    var name=document.getElementById("name").value;
 		    var num=document.getElementById("num").value;
 		    var regex = /^[a-zA-Z]+$/;
-		    var regex_num = /^\d{10}$/;
+		    var regex_num = /^[0-9]{1,10}$/;
 			    if(regex.test(name) == false){
 			   alert("Name must be in alphabets only");
 			   document.getElementById("name").focus();
