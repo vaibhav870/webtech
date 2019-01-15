@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+	<title></title>
+	<script>
+function email_check(){
+	var email=document.getElementById("email").value;
+	var email_regx=/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; 
+if(email_regx.test(email) == false){
+   alert("Not Valid Email");
+   
+       }
+}
+
+
+  function check_Alpha(){
+		    var name=document.getElementById("name").value;
+		    var num=document.getElementById("num").value;
+		    var regex = /^[a-zA-Z]+$/;
+		    var regex_num = /^\d{10}$/;
+			    if(regex.test(name) == false){
+			   alert("Name must be in alphabets only");
+			   document.getElementById("name").focus();
+			   return false;
+			    }
+			    if(regex_num.test(num)== false){
+			   		alert("Number only upto 10 ");
+			   		document.getElementById("num").focus();
+			   	return false;
+			   }
+				
+  }
+</script>
+</head>
+<body>
+ 	<form name="alphavalidate" action="success.html"
+  method="post" onSubmit="return check_Alpha()" >
+          
+  Name : 
+   <input type="text" size="40"  id="name" /> </br>
+    Number : 
+   <input type="text" size="40"  id="num" /> </br>
+    Email: 
+   <input type="text" size="40"  id="email" onblur="email_check()" /> 
+          
+  <input type="submit" value="Submit" />
+  <input type="reset" /> 
+ </form>  
+</body>
+</html>
