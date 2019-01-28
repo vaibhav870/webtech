@@ -1,1 +1,29 @@
+add java connector in following path in lib directory
 
+web Content
+-----------WEB-INF
+-----------------lib
+
+create two datbase tables
+1) users
+2) student
+
+user 
++----------+-------------+------+-----+---------+----------------+
+| Field    | Type        | Null | Key | Default | Extra          |
++----------+-------------+------+-----+---------+----------------+
+| id       | int(11)     | NO   | PRI | NULL    | auto_increment |
+| username | varchar(50) | NO   |     | NULL    |                |
+| password | varchar(10) | NO   |     | NULL    |                |
+| block    | int(1)      | NO   |     | NULL    |                |
++----------+-------------+------+-----+---------+----------------+
+
+student
++---------+-------------+------+-----+---------+----------------+
+| Field   | Type        | Null | Key | Default | Extra          |
++---------+-------------+------+-----+---------+----------------+
+| id      | int(11)     | NO   | PRI | NULL    | auto_increment |
+| stuname | varchar(10) | NO   |     | NULL    |                |
+| sturoll | int(5)      | NO   | UNI | NULL    |                |
+| stumark | int(3)      | NO   |     | NULL    |                |
++---------+-------------+------+-----+---------+----------------+
