@@ -1,8 +1,8 @@
-add java connector in following path in lib directory
-
-web Content
------------WEB-INF
------------------lib
+add java connector(file:-mysql-connector-java-5.1.47.jar) in following path in lib directory
+Project_name
+------------WebContent
+-----------------------WEB-INF
+------------------------------lib
 
 create two datbase tables
 1) users
