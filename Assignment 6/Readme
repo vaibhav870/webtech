@@ -1,0 +1,12 @@
+create table in database test 
+
+table name = emp 
+
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| id    | int(11)     | NO   | PRI | NULL    | auto_increment |
+| name  | varchar(20) | NO   |     | NULL    |                |
+| age   | int(2)      | NO   |     | NULL    |                |
+| city  | varchar(10) | NO   |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
