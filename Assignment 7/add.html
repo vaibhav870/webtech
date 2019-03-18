@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script  src="jquery-3.2.1.min.js"></script>
+ <script>
+        $(document).ready(function(){
+        $('input#submit').on('click',function(){
+           var name=$('input#name').val();
+           var age=$('input#age').val();
+           var city=$('input#city').val();
+
+                $.post('add.php',{name:name,age:age,city:city},function(data){
+                       $('div#result').text(data);
+                       var name=$('input#name').val('');
+                       var age=$('input#age').val('');
+                       var city=$('input#age').val('');
+                });
+
+            });
+
+        });
+</script>
+</head>
+<body>
+
+Enter name : <input type="text" id="name"></br>
+Enter age : <input type="text" id="age"></br>
+Enter city : <input type="text" id="city"></br>
+<input type="submit" value="submit" id="submit">
+
+<div id="result">
+
+</div>
+</body>
+</html>
