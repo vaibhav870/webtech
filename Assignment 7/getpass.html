@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>    
+        </title>
+        <script  src="jquery-3.2.1.min.js"></script>
+        <script>
+        $(document).ready(function(){
+
+        $('input#uname').on('keyup',function(){
+           var uname=$('input#uname').val();
+           if($.trim(uname)!=''){
+                $.post('pass.php',{name:uname},function(data){
+                        $('div#password').html(data);
+                });
+           }
+            });
+
+        });
+</script>      
+    </head>
+    <body>
+        <div class = "container">
+            <div class = "row">
+
+        Enter Username<input type="text" id="uname">
+                       <input type="submit" id="name-submit">
+            
+            </div>
+
+        </div>
+        <div id="password">
+            
+        </div>
+        
+    </body>
+    
+</html>

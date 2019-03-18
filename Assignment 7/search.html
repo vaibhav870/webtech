@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	 <script  src="jquery-3.2.1.min.js"></script>
+	 <script>
+	 		$(document).ready(function(){
+
+	 			$('input#name').on('keyup',function(){
+	 				var ename=$('input#name').val();
+	 				$.post('search.php',{name:ename},function(data){
+	 					$('#result').html(data);
+
+	 				});
+
+	 			});
+
+
+	 		});
+
+
+	 </script>
+</head>
+<body>
+
+Search <input type="text" id="name"></br>
+<div id="result"></div>
+</body>
+</html>

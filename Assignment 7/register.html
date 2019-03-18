@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script  src="jquery-3.2.1.min.js"></script>
+ <script>
+        $(document).ready(function(){  
+        $('input#submit').on('click',function(){
+           var uname=$('input#username').val();
+           var pass1=$('input#password').val();
+            if($.trim(uname)!=''){
+                $.post('register.php',{name:uname,pass:pass1},function(data){
+                       $('div#result').text(data);
+           				var uname=$('input#username').val('');
+           				var pass1=$('input#password').val('');
+                       
+                });
+           }
+            });
+
+        });
+</script>     
+</head>
+<body>
+
+Enter Usernmae : <input type="text" id="username"></br>
+Enter Password : <input type="text" id="password"></br>
+<input type="submit" value="submit" id="submit">
+
+<div id="result">
+	
+</div>
+</body>
+</html>
