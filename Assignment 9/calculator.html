@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.7/angular.min.js"></script>
+  <script type="text/javascript">
+var app= angular.module('myapp',[]);
+
+app.controller('calc',['$scope',function($scope){
+              
+              
+
+              $scope.Calculate=function(){
+                if($scope.oper=="add"){
+                $scope.c=parseInt($scope.a)  + parseInt($scope.b); 
+                }
+               if($scope.oper=="sub"){
+                $scope.c=parseInt($scope.a) - parseInt($scope.b); 
+                }
+                 if($scope.oper=="mul"){
+                $scope.c=parseInt($scope.a)  * parseInt($scope.b); 
+                }if($scope.oper=="div"){
+                $scope.c=parseInt($scope.a)  / parseInt($scope.b); 
+                }
+              }
+
+}]);
+
+
+</script>
+</head>
+<body ng-app="myapp">
+<div ng-controller="calc">
+  Number 1  <input type="text" ng-model="a"></br>
+  Number 2  <input type="text" ng-model="b"></br>
+      Result <span>{{c}}</span></br>
+      <select ng-model="oper">
+        <option>add</option>
+        <option>sub</option>
+        <option>mul</option>
+        <option>div</option>
+      </select>
+
+      <button ng-click="Calculate()">Calculate</button>
+</div>
+  
+    
+</body>
+</html>
