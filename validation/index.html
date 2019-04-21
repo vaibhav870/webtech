@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script>
+		
+function valdiate(){
+
+	var name=document.getElementById("name").value;
+	var num=document.getElementById('num').value;
+	var password=document.getElementById('password').value;
+	var email=document.getElementById('email').value;
+	var gender=document.getElementsByName('Gender');
+	var aggree=document.getElementById("aggree");
+	var city=document.getElementById("city");
+
+
+	var regexname=/[a-zA-z]+$/;
+		console.log(name);
+	if(regexname.test(name)== false){
+		alert("name not proper");
+		return false;
+	}
+
+	var regexnumber=/^\d{10}$/
+	if(regexnumber.test(num)==false){
+		alert("Number  should be 10digits");
+		return false;
+	}
+
+	var regexpassword=/^.{6,10}$/
+	if(regexpassword.test(password)== false){
+		alert("password minimum 6 max 10 characters");
+		return false;
+	}
+
+	var regxemail=/\w+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/
+
+	if(regxemail.test(email)== false){
+		alert ("Email is not proper");
+		return false;
+	}
+
+	if(gender[0].checked== false || gender[0].checked== false){
+		alert("select Gender");
+		return false;
+	}
+
+	if(aggree.checked==false){
+		alert("aggree Terms and conditions");
+		return false;
+		}
+
+		if(city.selectedIndex==0){
+		alert("select city");
+		return false;
+
+		}
+
+}
+
+	</script>
+</head>
+<body>
+<form method="post" onsubmit="return valdiate()" action="yes.html">
+	Name<input type="text" id="name"></br>
+	Number<input type="text" id="num"></br>
+	Password <input type="Password" id="password"></br>
+	Email<input type="text" id="email"></br>
+
+	Gender</br>
+	Male<input type="radio" name="Gender" id="male"></br>
+	Male<input type="radio" name="Gender" id="female"></br>
+
+	City <select id="city">
+		<option>select</option>
+		<option>Pune</option>
+		<option>Mumbai</option>
+		<option>Nashik</option>
+
+
+	</select>
+	I aggree Male<input type="checkbox" id="aggree"></br>
+	<input type="submit" name="submit" value="submit">
+	
+
+</form>
+</body>
+</html>
